@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    android:layout_margin="5dp"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    app:contentPadding="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="390dp"
+        android:layout_height="350dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="258dp"
+                android:layout_height="168dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="258dp"
+                    android:layout_height="168dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="40dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/thumbnailUrlPhotoViewNew1"
+                        android:layout_width="258dp"
+                        android:layout_height="168dp" />
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/item_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/baloo_bhai"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="-1sp"
+                android:paddingTop="10dp"
+                android:text="SEBASTIAN VETTEL WINS INDIAN GRAND PRIX IN INTENSE THRILLER"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/item_description"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:fontFamily="@font/baloo_bhai"
+                android:gravity="center|center_horizontal"
+                android:lineSpacingExtra="-1sp"
+                android:paddingLeft="5dp"
+                android:paddingTop="10dp"
+                android:paddingRight="5dp"
+                android:text="SEBASTIAN VETTEL WINS INDIAN GRAND PRIX IN INTENSE THRILLER"
+                android:textColor="#EC0000"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
