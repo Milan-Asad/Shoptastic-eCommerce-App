@@ -1,6 +1,8 @@
 package com.example.JSON_Rest_API_products_test
 
 import android.content.Context
+import android.content.Intent
+import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -14,7 +16,10 @@ import kotlinx.android.synthetic.main.row_items.view.*
 import kotlinx.android.synthetic.main.row_items_test.view.*
 import java.util.Locale.Category
 
+
+
 class MyAdapter (val context: Context, val testlist: List<ThrowawayDataItem>): RecyclerView.Adapter<MyAdapter.ViewHolder>() {
+
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         var userId: TextView
@@ -22,6 +27,19 @@ class MyAdapter (val context: Context, val testlist: List<ThrowawayDataItem>): R
         var userTitle: TextView
         var Category: TextView
         var Price: TextView
+
+
+
+        init {
+
+            itemView.setOnClickListener{
+                val intent = Intent(itemView.context, TestActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                itemView.context.startActivity(intent)
+
+            }
+        }
+
 
 
         init {
@@ -39,7 +57,15 @@ class MyAdapter (val context: Context, val testlist: List<ThrowawayDataItem>): R
             var imageView1 = itemView.findViewById<ImageView>(R.id.thumbnailUrlPhotoViewNew)
 
 
+
         }
+
+//        init {
+//            itemView.setOnClickListener{
+//                val intent = Intent(itemView.context, TestActivity::class.java)
+//                itemView.context.startActivity(intent)
+//            }
+//        }
 
         fun bind(TestVal: ThrowawayDataItem) { // ThumbnailImages
             //var thumbnailUrlPhoto = itemView.findViewById<ImageView>(R.id.thumbnailUrlPhotoView)
@@ -49,6 +75,8 @@ class MyAdapter (val context: Context, val testlist: List<ThrowawayDataItem>): R
 
             Picasso.get().load(TestVal.image).into(imageView12)
         }
+
+
 
     }
 
@@ -68,10 +96,17 @@ class MyAdapter (val context: Context, val testlist: List<ThrowawayDataItem>): R
 
         Log.d("Response", "List Count :${testlist.size} ")
         return holder.bind(testlist[position])
+
+
     }
 
     override fun getItemCount(): Int {
         return testlist.size
     }
+
+
+
+
+
 }
 

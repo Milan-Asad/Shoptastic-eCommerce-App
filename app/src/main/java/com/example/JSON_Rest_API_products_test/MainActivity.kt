@@ -1,18 +1,40 @@
 package com.example.JSON_Rest_API_products_test
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import android.widget.Toast
+import android.widget.Toolbar
+import androidx.fragment.app.ListFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.JSON_Rest_API_products_test.Fragments.GalleryFragment
+import com.example.JSON_Rest_API_products_test.Fragments.MembersFragment
 import com.example.JSON_Rest_API_products_test.Throwaway.ThrowawayDataItem
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.toolbar.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+
+// ORIGINAL LINK: https://jsonplaceholder.typicode.com/photos
+
+//const val BASE_URL = "https://jsonplaceholder.typicode.com"
+//const val BASE_URL = "https://dummyjson.com"
+//const val BASE_URL = "https://fakestoreapi.com" - MAIN LINK
+//
+// https://www.youtube.com/watch?v=EoJX7h7lGxM - RecyclerView Onclick
+//
+// https://devtut.github.io/android/recyclerview-onclicklisteners.html#easy-onlongclick-and-onclick-example
+//
+// https://www.youtube.com/watch?v=ENFWgi2z5KA
+//
+// https://www.youtube.com/watch?v=v8MbOjBCu0o - Fragment
+
 
 const val BASE_URL = "https://fakestoreapi.com"
 
@@ -22,11 +44,52 @@ class MainActivity : AppCompatActivity() {
     lateinit var MyAdapter: MyAdapter
     lateinit var LinearLayoutManager: LinearLayoutManager
 
+    // FRAGMENT VAR
+    private val ListFragment = ListFragment()
+    private val GalleryFragment = GalleryFragment()
+    private val MembersFragment = MembersFragment()
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash_screen)
+        setContentView(R.layout.activity_main)
 
+        // OPENS MAIN SCREEN (LEFT)
+        val ListBtn = findViewById(R.id.ListImage) as ImageView
+        ListBtn.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        // OPENS MIDDLE LOGIN PAGE (MIDDLE)
+        val LoginBtn = findViewById(R.id.SecurityImage) as ImageView
+        LoginBtn.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
+        // OPENS GALLERY PAGE (RIGHT)
+        val ImageBtn = findViewById(R.id.PhotoImage) as ImageView
+        ImageBtn.setOnClickListener {
+            val intent = Intent(this, TestActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
+
+//        replaceFragment(ListFragment)
+
+        // FRAGMENT TRANSACTION
+//        bottom_navigation.setOnNavigationItemSelectedListener {
+//            when(it.itemId) {
+//                R.id.ic_list-> replaceFragment(ListFragment)
+//                R.id.ic_photogallery -> replaceFragment(GalleryFragment)
+//                R.id.ic_security -> replaceFragment(MembersFragment)
+//            }
+//            true
+//        }
 
         // **TO DO AFTER MAKING NOTES**
         val recyclerViewUsers = findViewById<RecyclerView>(R.id.recyclerViewUsers)
@@ -38,6 +101,17 @@ class MainActivity : AppCompatActivity() {
         getMyData()
 
     }
+
+//    private fun replaceFragment(fragment: Fragment) {
+//        if(fragment !=null) {
+//            val transaction = supportFragmentManager.beginTransaction()
+//            transaction.replace(R.id.fragment_container, fragment)
+//            transaction.commit()
+//        }
+//    }
+
+
+
 
     // MAKING THE FUNCTION TO GET DATA FOR RETROFIT
     private fun getMyData() {
@@ -77,7 +151,7 @@ class MainActivity : AppCompatActivity() {
             override fun onFailure(call: Call<List<ThrowawayDataItem>?>, t: Throwable) {
                 // FAILURE STUFF HERE
                 Log.d("MainActivity", "onFailure: " + t.message)
-                Toast.makeText(applicationContext,"Error 404, Restart the app", Toast.LENGTH_LONG).show()
+                Toast.makeText(applicationContext,"Error 404, Refresh or restart the app", Toast.LENGTH_LONG).show()
 
 
             }
