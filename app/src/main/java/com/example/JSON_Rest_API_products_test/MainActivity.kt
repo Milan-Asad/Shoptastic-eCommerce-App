@@ -1,6 +1,7 @@
 package com.example.JSON_Rest_API_products_test
 
 import android.content.Intent
+import android.content.Intent.FLAG_ACTIVITY_NO_ANIMATION
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -60,6 +61,10 @@ class MainActivity : AppCompatActivity() {
         ListBtn.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+
+            overridePendingTransition(0, 0)
+            FLAG_ACTIVITY_NO_ANIMATION
+
         }
 
         // OPENS MIDDLE LOGIN PAGE (MIDDLE)
@@ -67,6 +72,10 @@ class MainActivity : AppCompatActivity() {
         LoginBtn.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
+
+            overridePendingTransition(0, 0)
+            FLAG_ACTIVITY_NO_ANIMATION
+
         }
 
         // OPENS GALLERY PAGE (RIGHT)
@@ -74,22 +83,11 @@ class MainActivity : AppCompatActivity() {
         ImageBtn.setOnClickListener {
             val intent = Intent(this, TestActivity::class.java)
             startActivity(intent)
+
+            overridePendingTransition(0, 0)
+            FLAG_ACTIVITY_NO_ANIMATION
         }
 
-
-
-
-//        replaceFragment(ListFragment)
-
-        // FRAGMENT TRANSACTION
-//        bottom_navigation.setOnNavigationItemSelectedListener {
-//            when(it.itemId) {
-//                R.id.ic_list-> replaceFragment(ListFragment)
-//                R.id.ic_photogallery -> replaceFragment(GalleryFragment)
-//                R.id.ic_security -> replaceFragment(MembersFragment)
-//            }
-//            true
-//        }
 
         // **TO DO AFTER MAKING NOTES**
         val recyclerViewUsers = findViewById<RecyclerView>(R.id.recyclerViewUsers)
@@ -101,16 +99,6 @@ class MainActivity : AppCompatActivity() {
         getMyData()
 
     }
-
-//    private fun replaceFragment(fragment: Fragment) {
-//        if(fragment !=null) {
-//            val transaction = supportFragmentManager.beginTransaction()
-//            transaction.replace(R.id.fragment_container, fragment)
-//            transaction.commit()
-//        }
-//    }
-
-
 
 
     // MAKING THE FUNCTION TO GET DATA FOR RETROFIT
@@ -200,4 +188,29 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }, 3000) // 3000 is the delayed time in milliseconds.
+ */
+
+/*
+    private fun replaceFragment(fragment: Fragment) {
+        if(fragment !=null) {
+            val transaction = supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.fragment_container, fragment)
+            transaction.commit()
+        }
+    }
+
+ */
+
+/*
+        replaceFragment(ListFragment)
+
+         FRAGMENT TRANSACTION
+        bottom_navigation.setOnNavigationItemSelectedListener {
+            when(it.itemId) {
+                R.id.ic_list-> replaceFragment(ListFragment)
+                R.id.ic_photogallery -> replaceFragment(GalleryFragment)
+                R.id.ic_security -> replaceFragment(MembersFragment)
+            }
+            true
+        }
  */

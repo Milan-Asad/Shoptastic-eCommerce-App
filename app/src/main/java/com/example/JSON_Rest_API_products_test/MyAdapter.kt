@@ -29,7 +29,7 @@ class MyAdapter (val context: Context, val testlist: List<ThrowawayDataItem>): R
         var Price: TextView
 
 
-
+        /* RecyclerView Onclick
         init {
 
             itemView.setOnClickListener{
@@ -39,7 +39,7 @@ class MyAdapter (val context: Context, val testlist: List<ThrowawayDataItem>): R
 
             }
         }
-
+         */
 
 
         init {

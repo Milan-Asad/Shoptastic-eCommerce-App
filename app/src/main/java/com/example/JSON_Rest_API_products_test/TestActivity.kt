@@ -15,6 +15,9 @@ class TestActivity : AppCompatActivity() {
         ListBtn.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+
+            overridePendingTransition(0, 0)
+            Intent.FLAG_ACTIVITY_NO_ANIMATION
         }
 
         // OPENS MIDDLE LOGIN PAGE (MIDDLE)
@@ -22,6 +25,9 @@ class TestActivity : AppCompatActivity() {
         LoginBtn.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
+
+            overridePendingTransition(0, 0)
+            Intent.FLAG_ACTIVITY_NO_ANIMATION
         }
 
         // OPENS GALLERY PAGE (RIGHT)
@@ -29,6 +35,9 @@ class TestActivity : AppCompatActivity() {
         ImageBtn.setOnClickListener {
             val intent = Intent(this, TestActivity::class.java)
             startActivity(intent)
+
+            overridePendingTransition(0, 0)
+            Intent.FLAG_ACTIVITY_NO_ANIMATION
         }
 
     }

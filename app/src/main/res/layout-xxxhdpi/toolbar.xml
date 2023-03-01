@@ -39,7 +39,7 @@
                 android:layout_height="75dp"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="169dp"
-                app:srcCompat="@drawable/ic_security_icon" />
+                app:srcCompat="@drawable/ic_person_icon" />
         </RelativeLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

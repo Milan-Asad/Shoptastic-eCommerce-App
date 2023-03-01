@@ -3,12 +3,36 @@ package com.example.JSON_Rest_API_products_test
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
+import android.widget.Toast
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        // MAKING VARIABLE FOR THE EDIT TEXT AND LOGIN BUTTON
+        val usernameEditText = findViewById<EditText>(R.id.usernameEditText)
+        val passwordEditText = findViewById<EditText>(R.id.passwordEditText)
+        val loginButton = findViewById<Button>(R.id.loginButton)
+
+        // VALIDATION
+        loginButton.setOnClickListener {
+            val username = usernameEditText.text.toString()
+            val password = passwordEditText.text.toString()
+
+
+
+            if (username == "admin" && password == "password") {
+                val intent = Intent(this, UsersListActivity::class.java)
+                startActivity(intent)
+                finish()
+            } else {
+                Toast.makeText(this, "Invalid username or password", Toast.LENGTH_SHORT).show()
+            }
+        }
 
 
         // OPENS MAIN SCREEN (LEFT)
@@ -16,6 +40,9 @@ class LoginActivity : AppCompatActivity() {
         ListBtn.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+
+            overridePendingTransition(0, 0)
+            Intent.FLAG_ACTIVITY_NO_ANIMATION
         }
 
         // OPENS MIDDLE LOGIN PAGE (MIDDLE)
@@ -23,6 +50,9 @@ class LoginActivity : AppCompatActivity() {
         LoginBtn.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
+
+            overridePendingTransition(0, 0)
+            Intent.FLAG_ACTIVITY_NO_ANIMATION
         }
 
         // OPENS GALLERY PAGE (RIGHT)
@@ -30,6 +60,9 @@ class LoginActivity : AppCompatActivity() {
         ImageBtn.setOnClickListener {
             val intent = Intent(this, TestActivity::class.java)
             startActivity(intent)
+
+            overridePendingTransition(0, 0)
+            Intent.FLAG_ACTIVITY_NO_ANIMATION
         }
 
     }
