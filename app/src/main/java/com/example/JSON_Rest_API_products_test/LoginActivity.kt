@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 
 class LoginActivity : AppCompatActivity() {
@@ -58,12 +59,17 @@ class LoginActivity : AppCompatActivity() {
         // OPENS GALLERY PAGE (RIGHT)
         val ImageBtn = findViewById(R.id.PhotoImage) as ImageView
         ImageBtn.setOnClickListener {
-            val intent = Intent(this, TestActivity::class.java)
+            val intent = Intent(this, GalleryActivity::class.java)
             startActivity(intent)
 
             overridePendingTransition(0, 0)
             Intent.FLAG_ACTIVITY_NO_ANIMATION
         }
 
+        // FORGOTTEN PASSWORD TEXT CLICK
+        val forgottenpasswordtxt = findViewById<TextView>(R.id.forgottenpasswordtxt)
+        forgottenpasswordtxt.setOnClickListener {
+            Toast.makeText(applicationContext,"Service not available right now", Toast.LENGTH_SHORT).show()
+        }
     }
 }

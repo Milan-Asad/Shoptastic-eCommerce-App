@@ -4,19 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TestActivity">
+    tools:context=".GalleryActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="316dp"
-        android:layout_height="258dp"
-        android:gravity="center"
-        android:text="TEST"
-        android:textSize="50dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gallery_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foregroundGravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <include
         android:id="@+id/include"
@@ -28,7 +26,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
-    </include>
+        app:layout_constraintVertical_bias="1.0"></include>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

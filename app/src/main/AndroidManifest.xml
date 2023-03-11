@@ -28,7 +28,7 @@
             android:name=".Gallery_fragment"
             android:exported="false" />
         <activity
-            android:name=".TestActivity"
+            android:name=".GalleryActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity

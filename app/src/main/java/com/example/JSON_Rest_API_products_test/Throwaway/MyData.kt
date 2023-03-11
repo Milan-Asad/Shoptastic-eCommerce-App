@@ -1,4 +1,6 @@
-package com.example.JSON_Rest_API_products_test
+package com.example.JSON_Rest_API_products_test.Throwaway
+
+import com.example.JSON_Rest_API_products_test.Throwaway.Product
 
 data class MyData(
     val limit: Int,

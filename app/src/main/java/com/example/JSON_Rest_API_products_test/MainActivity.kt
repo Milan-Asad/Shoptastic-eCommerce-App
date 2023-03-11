@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
 import android.widget.Toast
-import android.widget.Toolbar
 import androidx.fragment.app.ListFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,7 +14,6 @@ import com.example.JSON_Rest_API_products_test.Fragments.GalleryFragment
 import com.example.JSON_Rest_API_products_test.Fragments.MembersFragment
 import com.example.JSON_Rest_API_products_test.Throwaway.ThrowawayDataItem
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.toolbar.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -81,7 +79,7 @@ class MainActivity : AppCompatActivity() {
         // OPENS GALLERY PAGE (RIGHT)
         val ImageBtn = findViewById(R.id.PhotoImage) as ImageView
         ImageBtn.setOnClickListener {
-            val intent = Intent(this, TestActivity::class.java)
+            val intent = Intent(this, GalleryActivity::class.java)
             startActivity(intent)
 
             overridePendingTransition(0, 0)
