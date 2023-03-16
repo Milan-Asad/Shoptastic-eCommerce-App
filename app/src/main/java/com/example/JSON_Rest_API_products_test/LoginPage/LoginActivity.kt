@@ -1,13 +1,14 @@
-package com.example.JSON_Rest_API_products_test
+package com.example.JSON_Rest_API_products_test.LoginPage
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
+import com.example.JSON_Rest_API_products_test.GalleryPage.GalleryActivity
+import com.example.JSON_Rest_API_products_test.MainActivity
+import com.example.JSON_Rest_API_products_test.R
+import com.example.JSON_Rest_API_products_test.UserList.UsersListActivity
+
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +33,14 @@ class LoginActivity : AppCompatActivity() {
                 finish()
             } else {
                 Toast.makeText(this, "Invalid username or password", Toast.LENGTH_SHORT).show()
+//                val intent = Intent(this, UsersListActivity::class.java)
+//                startActivity(intent)
+//                finish()
             }
+
+
+
+
         }
 
 
@@ -69,7 +77,12 @@ class LoginActivity : AppCompatActivity() {
         // FORGOTTEN PASSWORD TEXT CLICK
         val forgottenpasswordtxt = findViewById<TextView>(R.id.forgottenpasswordtxt)
         forgottenpasswordtxt.setOnClickListener {
-            Toast.makeText(applicationContext,"Service not available right now", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(applicationContext,"Service not available right now", Toast.LENGTH_SHORT).show()
+            val intent = Intent (this, ForgottenPasswordActivity::class.java)
+            startActivity(intent)
+
+            overridePendingTransition(0, 0)
+            Intent.FLAG_ACTIVITY_NO_ANIMATION
         }
     }
 }

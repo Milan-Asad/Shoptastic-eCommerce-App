@@ -1,16 +1,19 @@
-package com.example.JSON_Rest_API_products_test
+package com.example.JSON_Rest_API_products_test.GalleryPage
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.JSON_Rest_API_products_test.LoginPage.LoginActivity
+import com.example.JSON_Rest_API_products_test.MainActivity
+import com.example.JSON_Rest_API_products_test.R
 import kotlinx.android.synthetic.main.activity_gallery.*
-import kotlinx.android.synthetic.main.activity_main.*
 
 class GalleryActivity : AppCompatActivity() {
+
+
 
     private var layoutManager: RecyclerView.LayoutManager? = null
     private var adapter: RecyclerView.Adapter<GalleryAdapter.ViewHolder>? = null
