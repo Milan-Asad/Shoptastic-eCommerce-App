@@ -10,3 +10,5 @@ Version 1.2: Password Login Screen added and UserData JSON Imported 01/03/2023
 Version 1.3: Gallery list page added 11/03/2023
 
 Version 1.4: Forgotten password page with toast message 16/03/2023
+
+Version 1.5: Gallery page onclick listener added (opens new page on the recyclerview when you click on it) 18/03/2023
