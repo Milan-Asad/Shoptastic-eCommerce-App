@@ -37,6 +37,9 @@ android {
             res {
                 srcDirs 'src\\main\\res', 'src\\main\\res\\myimages'
             }
+            assets {
+                srcDirs 'src\\main\\assets', 'src\\res'
+            }
         }
     }
 }
