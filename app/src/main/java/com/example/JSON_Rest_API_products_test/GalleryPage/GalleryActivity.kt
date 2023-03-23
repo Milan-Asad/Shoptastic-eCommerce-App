@@ -4,6 +4,7 @@ import android.content.Intent
 import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -11,6 +12,7 @@ import com.example.JSON_Rest_API_products_test.LoginPage.LoginActivity
 import com.example.JSON_Rest_API_products_test.MainActivity
 import com.example.JSON_Rest_API_products_test.MensCategory
 import com.example.JSON_Rest_API_products_test.R
+import com.example.JSON_Rest_API_products_test.WomensCategory
 import kotlinx.android.synthetic.main.activity_gallery.*
 
 class GalleryActivity : AppCompatActivity() {
@@ -30,12 +32,12 @@ class GalleryActivity : AppCompatActivity() {
         // MAKKING ARRAY FOR MENS IMAGE PAGE
         val MensimageList = listOf<MensImages>(
             MensImages(
-                R.raw.menstshirt,
-                "SHIRTS",
+                R.raw.menssuit,
+                "MALE CLOTHING",
             ),
             MensImages(
-                R.raw.mensjacket,
-                "JACKETS",
+                R.raw.femaleclothingcategory,
+                "FEMALE CLOTHING",
             )
 
         )
@@ -58,6 +60,16 @@ class GalleryActivity : AppCompatActivity() {
             startActivity(intent)
         }
          */
+
+        //********** TOP NAVIGATION BAR **********
+        val womensBtn = findViewById<Button>(R.id.womensBtn)
+        womensBtn.setOnClickListener {
+            val intent = Intent(this, WomensCategory::class.java)
+            startActivity(intent)
+
+            overridePendingTransition(0, 0)
+            Intent.FLAG_ACTIVITY_NO_ANIMATION
+        }
 
 
         //********** BOTTOM NAVIGATION BAR **********

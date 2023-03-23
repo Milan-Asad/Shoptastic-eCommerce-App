@@ -4,17 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GalleryPage.GalleryActivity">
+    tools:context=".WomensCategory">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/gallery_recyclerview"
+        android:id="@+id/womenscategory_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="720dp"
-        android:foregroundGravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
 
     <include
         android:id="@+id/include"
@@ -46,23 +48,26 @@
             <Button
                 android:id="@+id/mensBtn"
                 android:layout_width="130dp"
-                android:layout_height="37dp"
+
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/darkgrey"
                 android:text="MENS"
                 android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/womensBtn"
                 android:layout_width="130dp"
-                android:layout_height="wrap_content"
+                android:layout_height="37dp"
+
                 android:layout_weight="1"
+                android:background="@color/darkgrey"
                 android:text="WOMENS"
                 android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/button9"
                 android:layout_width="130dp"
+
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Button" />
@@ -70,10 +75,12 @@
             <Button
                 android:id="@+id/button10"
                 android:layout_width="130dp"
+
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Button" />
         </LinearLayout>
     </HorizontalScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

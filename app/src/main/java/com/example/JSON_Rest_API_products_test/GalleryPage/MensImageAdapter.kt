@@ -27,8 +27,11 @@ class MensImageAdapter(
         fun bindView(image: MensImages, listener: (MensImages) -> Unit) {
             imageSrc.setImageResource(image.imageSource)
             title.text = image.imageTitle
+
+
             itemView.setOnClickListener { listener(image) }
         }
+
 
     }
 

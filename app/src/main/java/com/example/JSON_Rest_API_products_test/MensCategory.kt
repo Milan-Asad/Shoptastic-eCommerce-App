@@ -22,6 +22,8 @@ class MensCategory : AppCompatActivity() {
     lateinit var MyAdapter: MyAdapter
     lateinit var LinearLayoutManager: LinearLayoutManager
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mens_category)
@@ -39,12 +41,18 @@ class MensCategory : AppCompatActivity() {
 
          */
 
+
+
+
         // RECYCLERVIEW ETC STUFF
+        
         val menscategory_recyclerview = findViewById<RecyclerView>(R.id.menscategory_recyclerview)
 
         layoutManager = LinearLayoutManager(this)
         menscategory_recyclerview.layoutManager = layoutManager
         adapter = MensCategoryAdapter()
         menscategory_recyclerview.adapter = adapter
+
+
     }
 }
