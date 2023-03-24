@@ -13,3 +13,4 @@ Version 1.4: Forgotten password page with toast message 16/03/2023
 
 Version 1.5: Gallery page onclick listener added (opens new page on the recyclerview when you click on it) 18/03/2023
 Version 1.5.1: Top navigation bar added on the gallery page (general back up before experimenting) 23/03/2022
+Version 1.5.2: Gallery page onclick updated (shows image, title, descrption). Further updates coming 24/03/2023
