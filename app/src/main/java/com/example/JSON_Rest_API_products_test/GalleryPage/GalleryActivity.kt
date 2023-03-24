@@ -34,11 +34,20 @@ class GalleryActivity : AppCompatActivity() {
             MensImages(
                 R.raw.menssuit,
                 "MALE CLOTHING",
+                "Testing out the description",
             ),
             MensImages(
                 R.raw.femaleclothingcategory,
                 "FEMALE CLOTHING",
+                "Testing out the description",
+            ),
+            MensImages(
+                R.raw.mensjacket,
+                "MENS JACKET CLOTHING",
+                "Testing out the description",
             )
+
+
 
         )
 

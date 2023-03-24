@@ -31,27 +31,38 @@ class MensCategory : AppCompatActivity() {
         // LINK UP
         val image = intent.getParcelableExtra<MensImages>(GalleryActivity.INTENT_PARCELABLE)
 
+
+        val imgSrc = findViewById<ImageView>(R.id.mensCategoryImage)
+        val imgTitle = findViewById<TextView>(R.id.mensCategoryTitle)
+        val imgDescription = findViewById<TextView>(R.id.mensCategoryDescription)
+
+
+        if (image != null) {
+            imgSrc.setImageResource(image.imageSource)
+        }
+        if (image != null) {
+            imgTitle.text = image.imageTitle
+        }
+        if (image != null) {
+            imgDescription.text = image.imageDescription
+        }
+
+
+
+
+
+
         /*
-        val imgSrc = findViewById<ImageView>(R.id.menscategoryimage)
-        val imgTitle = findViewById<TextView>(R.id.menscategorytxt)
-
-
-        imgSrc.setImageResource(image.imageSource)
-        imgTitle.text = image.imageTitle
-
-         */
-
-
-
-
         // RECYCLERVIEW ETC STUFF
-        
+
         val menscategory_recyclerview = findViewById<RecyclerView>(R.id.menscategory_recyclerview)
 
         layoutManager = LinearLayoutManager(this)
         menscategory_recyclerview.layoutManager = layoutManager
         adapter = MensCategoryAdapter()
         menscategory_recyclerview.adapter = adapter
+
+         */
 
 
     }
