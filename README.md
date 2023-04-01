@@ -16,3 +16,5 @@ Version 1.5: Gallery page onclick listener added (opens new page on the recycler
 Version 1.5.1: Top navigation bar added on the gallery page (general back up before experimenting) 23/03/2022
 
 Version 1.5.2: Gallery page onclick updated (shows image, title, descrption). Further updates coming 24/03/2023
+
+Version 1.5.3: General backup (added pricing in gallery page) 01/04/2023
