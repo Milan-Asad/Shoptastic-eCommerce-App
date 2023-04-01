@@ -72,7 +72,7 @@
                     android:gravity="center_horizontal"
                     android:lineSpacingExtra="-1sp"
                     android:paddingTop="30dp"
-                    android:text="SEBASTIAN VETTEL WINS INDIAN GRAND PRIX IN INTENSE THRILLER"
+                    android:text="LUXURY NAVY BLUE SUIT"
                     android:textColor="#000000"
                     android:textSize="15sp"
                     android:textStyle="bold" />
@@ -85,7 +85,7 @@
                     android:fontFamily="@font/baloo_bhai"
                     android:gravity="center"
                     android:lineSpacingExtra="-1sp"
-                    android:text="I'M JUST WAFFLING TO SEE HOW MUCH TEXT FITS IN THE SCREEN AND YEAH TODAY IS REALY BRIGHT AND SUNNY. I WISH I COULD GO OUT TODAY AND JUST ROAM AROUND. ALSO IM RUNNING OUT OF THINGS TO TYPE SO YEAH HOPEFULLY THESE WORDS ARE ENOUGH"
+                    android:text="TESTING TO SEE HOW MY TEXT LOOKS AND TO SEE HOW IT WOULD LOOK IN THE LAYOUT. ALL SEEMS GOOD AS OF NOW. THE TEXT IS PURPLE TO MAKE THE DESCRIPTION STAND OUT AND MATCH WITH THE THEME OF THE APP"
                     android:textColor="@color/purple"
                     android:textSize="10.25sp"
                     android:textStyle="bold" />

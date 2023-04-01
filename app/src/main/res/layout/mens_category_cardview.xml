@@ -43,7 +43,7 @@
                 android:rotation="270"
                 android:text="TEST"
                 android:textColor="#919191"
-                android:textSize="30dp"
+                android:textSize="65dp"
                 android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
 

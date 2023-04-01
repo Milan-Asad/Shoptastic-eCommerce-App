@@ -20,88 +20,60 @@ import java.util.Locale.Category
 
 class MyAdapter (val context: Context, val testlist: List<ThrowawayDataItem>): RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 
-
+    // **********VIEWHOLDER STUFF**********
+    // MAKING THE VIEW HOLDER AND LOCAL VARIABLES FOR BINDING
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        var userId: TextView
+        var Description: TextView
         var thumbnailUrlImage: ImageView
-        var userTitle: TextView
-        var Category: TextView
+        var Title: TextView
+        var Review: TextView
         var Price: TextView
 
-
-        /* RecyclerView Onclick
+        // INITALISING VARIABLES AND ASSIGNING IT TO ITEMS IN UI XML
         init {
-
-            itemView.setOnClickListener{
-                val intent = Intent(itemView.context, TestActivity::class.java)
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                itemView.context.startActivity(intent)
-
-            }
-        }
-         */
-
-
-        init {
-            userId = itemView.item_description
+            Description = itemView.item_description
             thumbnailUrlImage = itemView.thumbnailUrlPhotoViewNew1
-            userTitle = itemView.item_title
-            Category = itemView.ReviewTxt
+            Title = itemView.item_title
+            Review = itemView.ReviewTxt
             Price = itemView.PriceTxt
-
-            //userId = itemView.userId
-            //thumbnailUrlImage = itemView.thumbnailUrlPhotoViewNew
-            //userTitle = itemView.user_title
-
-            //var thumbnailUrlPhoto = itemView.findViewById<ImageView>(R.id.thumbnailUrlPhotoView)
-            var imageView1 = itemView.findViewById<ImageView>(R.id.thumbnailUrlPhotoViewNew)
-
-
-
         }
 
-//        init {
-//            itemView.setOnClickListener{
-//                val intent = Intent(itemView.context, TestActivity::class.java)
-//                itemView.context.startActivity(intent)
-//            }
-//        }
-
+        // BINDING THE IMAGE
         fun bind(TestVal: ThrowawayDataItem) { // ThumbnailImages
-            //var thumbnailUrlPhoto = itemView.findViewById<ImageView>(R.id.thumbnailUrlPhotoView)
-            val imageView12 = itemView.findViewById<ImageView>(R.id.thumbnailUrlPhotoViewNew1)
+            // MAKING VARIABLE FOR THE IMAGE
+            val PicassoLoader = itemView.findViewById<ImageView>(R.id.thumbnailUrlPhotoViewNew1)
 
-
-
-            Picasso.get().load(TestVal.image).into(imageView12)
+            // USING PICASSO LIBRARY TO LOAD IMAGES
+            Picasso.get().load(TestVal.image).into(PicassoLoader)
         }
-
 
 
     }
 
+    // ON CREATING THE VIEWHOLDER
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        var itemView = LayoutInflater.from(context).inflate(R.layout.row_items_test, parent, false)
-        return ViewHolder(itemView)
+        var itemView = LayoutInflater.from(context).inflate(R.layout.row_items_test, parent, false) // ASSIGNING THE LAYOUT XML
+        return ViewHolder(itemView) // RETURNUNG THE VAR ABOVE (ASSIGNING THE LAYOUT XML UI)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.userId.text = testlist[position].description
-        holder.userTitle.text = testlist[position].title
-        holder.Category.text = testlist[position].rating.toString()
-        holder.Price.text = testlist[position].price.toString()
+        // BINDING THE VARIABLES FROM BEFORE TO THE ACTUAL JSON DATA
+        holder.Description.text = testlist[position].description
+        holder.Title.text = testlist[position].title
+        holder.Review.text = testlist[position].rating.toString() // TO STRING CALL REQUIRED SINCE THIS IS A DOUBLE
+        holder.Price.text = testlist[position].price.toString()     // TO STRING CALL REQUIRED SINCE THIS IS A INT (TITLE ETC ARE STRINGS)
 
-        //holder.userId.text = testlist[position].title
-        //holder.userTitle.text = testlist[position].description
+        // Log.D to check the response of how many items are displayed for debugging
+        Log.d("Response", "List Count Response is: ${testlist.size} Items from API")
 
-        Log.d("Response", "List Count :${testlist.size} ")
+        // RETURNING SIZE OF TESTLIST (API DATA) TO XML POSITION
         return holder.bind(testlist[position])
 
 
     }
 
     override fun getItemCount(): Int {
-        return testlist.size
+        return testlist.size // RETURNING SIZE OF API DATA
     }
 
 

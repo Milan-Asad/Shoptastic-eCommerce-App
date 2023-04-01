@@ -6,7 +6,8 @@ import retrofit2.http.GET
 
 interface ApiInterface {
 
-    @GET("products")
-    fun getData(): Call<List<ThrowawayDataItem>>
+    @GET("products") // PERFORMING A GET REQUEST
+    fun getData(): Call<List<ThrowawayDataItem>> // MAKING A FUNCTION TO ATTACH TO RETROFIT
+    // THIS FUNCTION IS MAKING A CALL TO THE SERVER TO SEND THE DATA
 
 }

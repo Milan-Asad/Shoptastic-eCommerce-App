@@ -35,8 +35,10 @@ class MensCategory : AppCompatActivity() {
         val imgSrc = findViewById<ImageView>(R.id.mensCategoryImage)
         val imgTitle = findViewById<TextView>(R.id.mensCategoryTitle)
         val imgDescription = findViewById<TextView>(R.id.mensCategoryDescription)
+        val imagePrice = findViewById<TextView>(R.id.mensCategoryPrice)
+        val imageSize = findViewById<TextView>(R.id.mensCategorySize)
 
-
+        // CALLING FROM MENS IMAGE CLASS
         if (image != null) {
             imgSrc.setImageResource(image.imageSource)
         }
@@ -46,6 +48,13 @@ class MensCategory : AppCompatActivity() {
         if (image != null) {
             imgDescription.text = image.imageDescription
         }
+        if (image!= null) {
+            imagePrice.text = image.imagePrice
+        }
+        if (image!= null) {
+            imageSize.text = image.imageSize
+        }
+
 
 
 

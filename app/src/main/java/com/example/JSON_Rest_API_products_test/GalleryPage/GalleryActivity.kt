@@ -30,21 +30,28 @@ class GalleryActivity : AppCompatActivity() {
         setContentView(R.layout.activity_gallery)
 
         // MAKKING ARRAY FOR MENS IMAGE PAGE
+        // REMEMBER ALL IMAGES ARE MEANT TO BE 956x1285
         val MensimageList = listOf<MensImages>(
             MensImages(
                 R.raw.menssuit,
-                "MALE CLOTHING",
-                "Testing out the description",
+                "NAVY BLUE SUIT",
+                "Every wardrobe needs a suit that offers versatility and value, a suit that will take you from work to weddings and everything in between. Tailored to precision and perfection, this suit will add a new dimension to your wardrobe, giving it depth, colour and taste. Order your luxurious navy blue suit today. (For tailored fitting sizes, please click here).",
+                "Price: £149.99",
+                "Size: XXS, XS, S, M, L, XL, XXL"
             ),
             MensImages(
-                R.raw.femaleclothingcategory,
-                "FEMALE CLOTHING",
-                "Testing out the description",
+                R.raw.menstshirt,
+                "T-SHIRT",
+                "A thin t-shirt, perfect for wearing in suffer. This t-shirt is made from 100% cotton to give a satisfying, comfortable feeling when wearing it. T-shirts offer versatility, from wearing it as an undershirt to being able to wear it on its own. Our t-shirts are available at a low cost, because everybody needs a t-shirt. Order yours today.",
+                "Price: £2.50",
+                "Size: XXS, XS, S, M, L, XL, XXL"
             ),
             MensImages(
-                R.raw.mensjacket,
-                "MENS JACKET CLOTHING",
-                "Testing out the description",
+                R.raw.mensjacketv1,
+                "BROWN TRENCH COAT",
+                "Inspired by british heritage, tailored to perfection and embraced with modernity. This brown trench coat can take your wardrobe to the unknown. Crafted by experienced tailors with years of experience to make it as premium as possible, this coat is exclusively available only on this site. Order your trench coat today.",
+                "Price: £59.99",
+                "Size: XS, S, M, L"
             )
 
 

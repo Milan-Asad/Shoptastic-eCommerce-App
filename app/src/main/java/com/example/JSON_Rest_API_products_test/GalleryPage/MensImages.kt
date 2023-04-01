@@ -8,4 +8,6 @@ data class MensImages(
     val imageSource : Int,
     val imageTitle: String,
     val imageDescription: String,
+    val imagePrice: String,
+    val imageSize: String,
 ): Parcelable

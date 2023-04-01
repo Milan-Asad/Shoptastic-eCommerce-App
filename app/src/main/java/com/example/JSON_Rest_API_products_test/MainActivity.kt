@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        // **TO DO AFTER MAKING NOTES**
+        // **MAKING THE RECYCLERVIEW AND LINEARLAYOUT MANAGER**
         val recyclerViewUsers = findViewById<RecyclerView>(R.id.recyclerViewUsers)
         recyclerViewUsers.setHasFixedSize(true)
         LinearLayoutManager = LinearLayoutManager(this)
@@ -107,7 +107,7 @@ class MainActivity : AppCompatActivity() {
     // MAKING THE FUNCTION TO GET DATA FOR RETROFIT
     private fun getMyData() {
         val retrofitBuilder = Retrofit.Builder()  // Starts Retrofit Builder
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create()) // Converts the JSON data to be usable for Retrofit
             .baseUrl(BASE_URL)                // Calling the URL which holds the JSON files
             .build()                          // Building it
             .create(ApiInterface::class.java) // Creating it from the API class we made as we did a get request there
@@ -127,7 +127,7 @@ class MainActivity : AppCompatActivity() {
                 // Response stuff here and !! is used to null it
                 val responseBody = response.body()!!
                 MyAdapter = MyAdapter(baseContext, responseBody)
-                MyAdapter.notifyDataSetChanged()                    // Notifys whats attached when the data has changed and should update in the view
+                MyAdapter.notifyDataSetChanged() // Notifys whats attached when the data has changed and should update in the view
 
                 // Below is getting the recycler view and attaching the adapter to it
                 // Remember the adapter has all the information
@@ -142,6 +142,7 @@ class MainActivity : AppCompatActivity() {
             override fun onFailure(call: Call<List<ThrowawayDataItem>?>, t: Throwable) {
                 // FAILURE STUFF HERE
                 Log.d("MainActivity", "onFailure: " + t.message)
+                // TOAST TO SHOW THE ERROR MESSAGE
                 Toast.makeText(applicationContext,"Error 404, Refresh or restart the app", Toast.LENGTH_LONG).show()
 
 

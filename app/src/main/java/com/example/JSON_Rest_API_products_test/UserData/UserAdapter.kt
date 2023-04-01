@@ -58,8 +58,7 @@ class UserAdapter (val context: Context, val userList: List<UserDataItem>): Recy
         holder.username.text = userList[position].username
         holder.password.text = userList[position].password
 
-        //holder.userId.text = testlist[position].title
-        //holder.userTitle.text = testlist[position].description
+
 
         Log.d("Response", "List Count :${userList.size} ")
 
