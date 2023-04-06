@@ -18,3 +18,5 @@ Version 1.5.1: Top navigation bar added on the gallery page (general back up bef
 Version 1.5.2: Gallery page onclick updated (shows image, title, descrption). Further updates coming 24/03/2023
 
 Version 1.5.3: General backup (added pricing in gallery page) 01/04/2023
+
+Version 1.6: Added checkout page with validation and polished up the app 06/04/2023
