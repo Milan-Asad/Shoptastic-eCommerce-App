@@ -8,5 +8,6 @@ import retrofit2.http.GET
 interface ApiUserInterface {
 
     @GET("users")
+    // FUNCTION TO CALL DURING RETROFIT
     fun GetUserListData(): Call<List<UserDataItem>>
 }

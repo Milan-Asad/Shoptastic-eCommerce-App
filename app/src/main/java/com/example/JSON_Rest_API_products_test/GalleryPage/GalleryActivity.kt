@@ -69,13 +69,7 @@ class GalleryActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        /*
-        recyclerView.adapter = ImageAdapter(this, imageList){
-            val intent = Intent(this, DetailActivity::class.java)
-            intent.putExtra(INTENT_PARCELABLE, it)
-            startActivity(intent)
-        }
-         */
+
 
         //********** TOP NAVIGATION BAR **********
         val womensBtn = findViewById<Button>(R.id.womensBtn)

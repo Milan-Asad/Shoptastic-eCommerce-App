@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import com.example.JSON_Rest_API_products_test.CheckoutActivity
 import com.example.JSON_Rest_API_products_test.GalleryPage.GalleryActivity
 import com.example.JSON_Rest_API_products_test.MainActivity
 import com.example.JSON_Rest_API_products_test.R
@@ -31,12 +32,25 @@ class LoginActivity : AppCompatActivity() {
                 val intent = Intent(this, UsersListActivity::class.java)
                 startActivity(intent)
                 finish()
+            } else if (username == "milan" && password == "password") {
+                val intent = Intent(this, CheckoutActivity::class.java)
+                startActivity(intent)
+                finish()
             } else {
                 Toast.makeText(this, "Invalid username or password", Toast.LENGTH_SHORT).show()
 //                val intent = Intent(this, UsersListActivity::class.java)
 //                startActivity(intent)
 //                finish()
             }
+
+            /*
+            if (username == "milan" && password == "password") {
+                val intent = Intent(this, CheckoutActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+
+             */
 
 
 

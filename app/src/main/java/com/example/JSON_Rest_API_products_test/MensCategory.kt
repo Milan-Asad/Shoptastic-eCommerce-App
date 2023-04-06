@@ -3,8 +3,10 @@ package com.example.JSON_Rest_API_products_test
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.JSON_Rest_API_products_test.GalleryPage.GalleryActivity
@@ -31,14 +33,17 @@ class MensCategory : AppCompatActivity() {
         // LINK UP
         val image = intent.getParcelableExtra<MensImages>(GalleryActivity.INTENT_PARCELABLE)
 
-
+        // BINDING TEXT
         val imgSrc = findViewById<ImageView>(R.id.mensCategoryImage)
         val imgTitle = findViewById<TextView>(R.id.mensCategoryTitle)
         val imgDescription = findViewById<TextView>(R.id.mensCategoryDescription)
         val imagePrice = findViewById<TextView>(R.id.mensCategoryPrice)
         val imageSize = findViewById<TextView>(R.id.mensCategorySize)
 
-        // CALLING FROM MENS IMAGE CLASS
+        // BINDING BUTTONS
+        val buynowBtn = findViewById<Button>(R.id.buynowBtn)
+
+        // MAKING IT NULL TO SHOW THE TEXT AND IMAGE
         if (image != null) {
             imgSrc.setImageResource(image.imageSource)
         }
@@ -53,6 +58,15 @@ class MensCategory : AppCompatActivity() {
         }
         if (image!= null) {
             imageSize.text = image.imageSize
+        }
+
+        // ONCLICK TO OPEN CHECKOUT PAGE
+        buynowBtn.setOnClickListener {
+            val intent = Intent(this, CheckoutActivity::class.java)
+            startActivity(intent)
+            overridePendingTransition(0, 0)
+            Intent.FLAG_ACTIVITY_NO_ANIMATION
+            //Toast.makeText(applicationContext,"SERVICE NOT AVAILABLE RIGHT NOW", Toast.LENGTH_SHORT).show()
         }
 
 

@@ -16,27 +16,17 @@ class ForgottenPasswordActivity : AppCompatActivity() {
         setContentView(R.layout.activity_forgotten_password)
 
 
-        // VALIDATION
+        // VALIDATION FOR PASSWORD
         forgottenpasswordbtn.setOnClickListener {
             val password = forgottenpasswordtxtbox.text.toString()
 
-
-            // if (password == "admin" ) {
-            // if (password.contains("@", ".com")) {
+            // IF STATEMENTS
+            // IF PASSWORD CONTAINS @ SIGN
             if (password.contains("@")) {
-                /*
-                val intent = Intent(this, UsersListActivity::class.java)
-                startActivity(intent)
-                finish()
-                 */
                 Toast.makeText(applicationContext,"Reset link has been sent to your email", Toast.LENGTH_SHORT).show()
-            } else {
+            } else { // OTHERWISE....
                 Toast.makeText(applicationContext,"Please enter a valid email", Toast.LENGTH_SHORT).show()
             }
-
-
-
-
         }
 
 

@@ -15,6 +15,10 @@ import com.example.JSON_Rest_API_products_test.R
 import com.example.JSON_Rest_API_products_test.UserData.UserAdapter
 import com.example.JSON_Rest_API_products_test.UserData.UserDataItem
 import kotlinx.android.synthetic.main.activity_users_list_activity.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -74,49 +78,55 @@ class UsersListActivity : AppCompatActivity() {
     }
 
     private fun GetUserListData() {
-        val retrofitBuilder = Retrofit.Builder()
-            .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(BASE_URL_USER)
-            .build()
-            .create(ApiUserInterface::class.java)
 
-        val retrofitData = retrofitBuilder.GetUserListData()
+        // **********COROUTINES**********
+        val coroutineScope = CoroutineScope(Dispatchers.Main)
+        coroutineScope.launch {
+            delay(3000L)
+            val retrofitBuilder = Retrofit.Builder()
+                .addConverterFactory(GsonConverterFactory.create())
+                .baseUrl(BASE_URL_USER)
+                .build()
+                .create(ApiUserInterface::class.java)
 
-
-        retrofitData.enqueue(object : Callback<List<UserDataItem>?> {
-            override fun onResponse(
-                call: Call<List<UserDataItem>?>,          // Calling the list from MyDataItem
-                response: Response<List<UserDataItem>?>   // The response is (once again) MyDataItem
-                // Because we want to display that
-            ) {
-                // Response stuff here and !! is used to null it
-                val responseBody = response.body()!!
-                UserAdapter = UserAdapter(baseContext, responseBody)
-                UserAdapter.notifyDataSetChanged()                    // Notifys whats attached when the data has changed and should update in the view
-
-                // Below is getting the recycler view and attaching the adapter to it
-                // Remember the adapter has all the information
-
-                //val recyclerViewUsers = findViewById<RecyclerView>(R.id.recyclerViewUsers)
-                recyclerViewUserList.adapter = UserAdapter
-
-            }
+            val retrofitData = retrofitBuilder.GetUserListData()
 
 
-            // ON-FAILURE which shows an error like Error 404
-            override fun onFailure(call: Call<List<UserDataItem>?>, t: Throwable) {
-                // FAILURE STUFF HERE
-                Log.d("MainActivity", "onFailure: " + t.message)
-                Toast.makeText(
-                    applicationContext,
-                    "Error 404, Refresh or restart the app",
-                    Toast.LENGTH_LONG
-                ).show()
+            retrofitData.enqueue(object : Callback<List<UserDataItem>?> {
+                override fun onResponse(
+                    call: Call<List<UserDataItem>?>,          // Calling the list from MyDataItem
+                    response: Response<List<UserDataItem>?>   // The response is (once again) MyDataItem
+                    // Because we want to display that
+                ) {
+                    // Response stuff here and !! is used to null it
+                    val responseBody = response.body()!!
+                    UserAdapter = UserAdapter(baseContext, responseBody)
+                    UserAdapter.notifyDataSetChanged()                    // Notifys whats attached when the data has changed and should update in the view
+
+                    // Below is getting the recycler view and attaching the adapter to it
+                    // Remember the adapter has all the information
+
+                    //val recyclerViewUsers = findViewById<RecyclerView>(R.id.recyclerViewUsers)
+                    recyclerViewUserList.adapter = UserAdapter
+
+                }
 
 
-            }
+                // ON-FAILURE which shows an error like Error 404
+                override fun onFailure(call: Call<List<UserDataItem>?>, t: Throwable) {
+                    // FAILURE STUFF HERE
+                    Log.d("MainActivity", "onFailure: " + t.message)
+                    Toast.makeText(
+                        applicationContext,
+                        "Error 404, Refresh or restart the app",
+                        Toast.LENGTH_LONG
+                    ).show()
 
 
-        })
+                }
+
+
+            })
+        }
     }
 }

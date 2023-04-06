@@ -12,13 +12,3 @@ data class UserDataItem(
 )
 
 
-
-/*
-{
-    val firstname: String
-    init {
-        firstname = Name.firstname
-    }
-
-}
- */
