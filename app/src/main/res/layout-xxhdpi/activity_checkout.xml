@@ -30,7 +30,7 @@
 
     <Button
         android:id="@+id/checkoutBtn"
-        android:layout_width="375dp"
+        android:layout_width="325dp"
         android:layout_height="49dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/almarai_extrabold"
         android:text="ADD YOUR CARD DETAILS"
-        android:textSize="26.5dp"
+        android:textSize="23.5dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -149,24 +149,24 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/expiryDateContainer"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        android:layout_width="160dp"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="5"
         app:helperText="@string/required"
         app:helperTextTextColor="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintHorizontal_bias="0.087"
         app:layout_constraintStart_toStartOf="parent"
-        app:counterEnabled="true"
-        app:counterMaxLength="5"
         app:layout_constraintTop_toBottomOf="@+id/cardNumberContainer"
         app:layout_constraintVertical_bias="0.0">
 
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/expiryDateEditText"
-            android:layout_width="160dp"
+            android:layout_width="140dp"
             android:layout_height="match_parent"
             android:hint="@string/expiryDate"
             android:inputType="number|text"
@@ -178,7 +178,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/CCVContainer"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        android:layout_width="160dp"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         app:counterEnabled="true"
@@ -187,7 +187,7 @@
         app:helperTextTextColor="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.916"
+        app:layout_constraintHorizontal_bias="0.896"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardNumberContainer"
         app:layout_constraintVertical_bias="0.0">
@@ -195,7 +195,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/CCVEditText"
-            android:layout_width="160dp"
+            android:layout_width="140dp"
             android:layout_height="match_parent"
             android:hint="@string/ccv"
             android:inputType="number"

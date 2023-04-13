@@ -32,21 +32,23 @@
                 android:layout_marginBottom="0dp"
                 android:fontFamily="@font/playball"
                 android:gravity="center"
-                android:text="Shopify"
+                android:text="Shoptastic"
                 android:textColor="@color/white"
                 android:textSize="30dp"
                 android:textStyle="bold" />
 
+            <!--
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="74dp"
-                android:layout_height="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginTop="0dp"
-                android:layout_marginBottom="0dp"
+                android:layout_marginBottom="8dp"
                 android:paddingLeft="20dp"
                 app:srcCompat="@drawable/ic_list_icon" />
+                -->
         </RelativeLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

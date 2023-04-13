@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.JSON_Rest_API_products_test.LoginPage.LoginActivity
@@ -42,7 +43,7 @@ class GalleryActivity : AppCompatActivity() {
             MensImages(
                 R.raw.menstshirt,
                 "T-SHIRT",
-                "A thin t-shirt, perfect for wearing in suffer. This t-shirt is made from 100% cotton to give a satisfying, comfortable feeling when wearing it. T-shirts offer versatility, from wearing it as an undershirt to being able to wear it on its own. Our t-shirts are available at a low cost, because everybody needs a t-shirt. Order yours today.",
+                "A thin t-shirt, perfect for wearing in summer. This t-shirt is made from 100% cotton to give a satisfying, comfortable feeling when wearing it. T-shirts offer versatility, from wearing it as an undershirt to being able to wear it on its own. Our t-shirts are available at a low cost, because everybody needs a t-shirt in their wardrobe. Order yours today.",
                 "Price: £2.50",
                 "Size: XXS, XS, S, M, L, XL, XXL"
             ),
@@ -52,7 +53,42 @@ class GalleryActivity : AppCompatActivity() {
                 "Inspired by british heritage, tailored to perfection and embraced with modernity. This brown trench coat can take your wardrobe to the unknown. Crafted by experienced tailors with years of experience to make it as premium as possible, this coat is exclusively available only on this site. Order your trench coat today.",
                 "Price: £59.99",
                 "Size: XS, S, M, L"
-            )
+            ),
+            MensImages(
+                R.raw.mensredtrenchcoat,
+                "RED TRENCH COAT",
+                "Inspired by british heritage, tailored to perfection and embraced with its vividness. This red trench coat can take your wardrobe to the unknown. Crafted by experienced tailors with years of experience to make it as premium as possible, this coat is exclusively available only on this site. Order your trench coat today. ",
+                "Price: £99.99",
+                "Size: XS, S, M, L, XL"
+            ),
+            MensImages(
+                R.raw.mensdenimjacket,
+                "WORKS DENIM JACKET",
+                "Denim jackets are brilliant for sunshine weather. This jacket offers you versatility for your summer fits. Highly recommended with white jeans. Order your denim jacket today..",
+                "Price: £29.99",
+                "Size: XXS, XS, S, M, L, XL"
+            ),
+            MensImages(
+                R.raw.mensshirt,
+                "L&X SHIRT",
+                "A bright, classy shirt. Matches perfectly with jeans. L&X Luxurious shirt range are specially designed to avoid creasing when standing. Order your shirt today.",
+                "Price: £17.99",
+                "Size: XXS, XS, S, M, L, XL"
+            ),
+            MensImages(
+                R.raw.menspolo,
+                "EAGLE  POLO",
+                "A classic polo which adds flavour, depth and energy to your wardrobe. Highly recommended for sunny weather when on holiday, this polo is designed to keep you cool when the temperature turns up. Order your polo today.",
+                "Price: £4.99",
+                "Size: XS, S, M, L, XL"
+            ),
+            MensImages(
+                R.raw.menspurplevneck,
+                "PREMIER  V-NECK",
+                "A rich-purple V-neck made with fine cotton, precisely threaded to give your body an amazing feeling. V-necks work perfectly over a shirt. Order your V-Neck today.",
+                "Price: £19.99",
+                "Size: XS, S, M, L, XL"
+            ),
 
 
 
@@ -80,6 +116,17 @@ class GalleryActivity : AppCompatActivity() {
             overridePendingTransition(0, 0)
             Intent.FLAG_ACTIVITY_NO_ANIMATION
         }
+
+        val launchingSoonBtn1 = findViewById<Button>(R.id.launchingSoonWomens1Btn)
+        launchingSoonBtn1.setOnClickListener {
+            Toast.makeText(this, "Launching soon", Toast.LENGTH_SHORT).show()
+        }
+
+        val launchingSoonBtn2 = findViewById<Button>(R.id.launchingsoonwomens2Btn)
+        launchingSoonBtn2.setOnClickListener {
+            Toast.makeText(this, "Launching soon", Toast.LENGTH_SHORT).show()
+        }
+
 
 
         //********** BOTTOM NAVIGATION BAR **********
@@ -116,11 +163,3 @@ class GalleryActivity : AppCompatActivity() {
 
     }
 }
-
-/*
-layoutManager = LinearLayoutManager(this)
-        gallery_recyclerview.layoutManager = layoutManager
-        adapter = GalleryAdapter()
-        gallery_recyclerview.adapter = adapter
-
- */

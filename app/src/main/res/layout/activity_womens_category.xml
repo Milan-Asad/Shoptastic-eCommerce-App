@@ -52,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="MENS"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/womensBtn"
@@ -65,20 +65,20 @@
                 android:textColor="@color/white" />
 
             <Button
-                android:id="@+id/button9"
+                android:id="@+id/launchingSoonWomens1Btn"
                 android:layout_width="130dp"
 
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="TECHNOLOGY" />
 
             <Button
-                android:id="@+id/button10"
+                android:id="@+id/launchingsoonwomens2Btn"
                 android:layout_width="130dp"
 
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="HOUSING" />
         </LinearLayout>
     </HorizontalScrollView>
 

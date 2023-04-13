@@ -9,14 +9,14 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/gallery_recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="670dp"
+        android:layout_height="610dp"
         android:foregroundGravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
+        app:layout_constraintVertical_bias="0.452" />
 
     <include
         android:id="@+id/include"
@@ -33,6 +33,7 @@
     <HorizontalScrollView
         android:layout_width="409dp"
         android:layout_height="53dp"
+        android:paddingLeft="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

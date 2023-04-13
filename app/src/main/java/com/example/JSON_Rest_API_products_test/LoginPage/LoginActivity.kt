@@ -21,39 +21,24 @@ class LoginActivity : AppCompatActivity() {
         val passwordEditText = findViewById<EditText>(R.id.passwordEditText)
         val loginButton = findViewById<Button>(R.id.loginButton)
 
-        // VALIDATION
+        // CALLING IT TO A STRING TO CHECK IF THE TEXT MATCHES THE IF STATEMENTS
         loginButton.setOnClickListener {
             val username = usernameEditText.text.toString()
             val password = passwordEditText.text.toString()
 
-
-
-            if (username == "admin" && password == "password") {
+            // ***IF STATEMENTS***
+            if (username == "admin" && password == "password") {        // ADMIN ACCESS (TO SHOW THE USERLIST DISPLAY)
                 val intent = Intent(this, UsersListActivity::class.java)
                 startActivity(intent)
                 finish()
-            } else if (username == "milan" && password == "password") {
+            } else if (username == "milan" && password == "password") { // TO LOG INTO CHECKOUT ACCOUNT
                 val intent = Intent(this, CheckoutActivity::class.java)
                 startActivity(intent)
                 finish()
-            } else {
+            } else {                                                    // DISPLAYS A INVALID TOAST
                 Toast.makeText(this, "Invalid username or password", Toast.LENGTH_SHORT).show()
-//                val intent = Intent(this, UsersListActivity::class.java)
-//                startActivity(intent)
-//                finish()
+
             }
-
-            /*
-            if (username == "milan" && password == "password") {
-                val intent = Intent(this, CheckoutActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
-
-             */
-
-
-
 
         }
 

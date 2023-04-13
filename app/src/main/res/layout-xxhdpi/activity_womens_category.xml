@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GalleryPage.GalleryActivity">
+    tools:context=".WomensCategory">
+
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/gallery_recyclerview"
+        android:id="@+id/womenscategory_recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="670dp"
-        android:foregroundGravity="center"
+        android:layout_height="610dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
+        app:layout_constraintVertical_bias="0.452" />
 
     <include
         android:id="@+id/include"
@@ -33,6 +33,7 @@
     <HorizontalScrollView
         android:layout_width="409dp"
         android:layout_height="53dp"
+        android:paddingLeft="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -48,23 +49,26 @@
             <Button
                 android:id="@+id/mensBtn"
                 android:layout_width="130dp"
-                android:layout_height="37dp"
+
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/darkgrey"
                 android:text="MENS"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/womensBtn"
                 android:layout_width="130dp"
-                android:layout_height="wrap_content"
+                android:layout_height="37dp"
+
                 android:layout_weight="1"
+                android:background="@color/darkgrey"
                 android:text="WOMENS"
-                android:textColor="@color/black" />
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/launchingSoonWomens1Btn"
                 android:layout_width="130dp"
+
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="TECHNOLOGY" />
@@ -72,10 +76,12 @@
             <Button
                 android:id="@+id/launchingsoonwomens2Btn"
                 android:layout_width="130dp"
+
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="HOUSING" />
         </LinearLayout>
     </HorizontalScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

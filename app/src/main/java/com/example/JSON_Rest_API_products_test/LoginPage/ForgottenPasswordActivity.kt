@@ -9,6 +9,7 @@ import com.example.JSON_Rest_API_products_test.GalleryPage.GalleryActivity
 import com.example.JSON_Rest_API_products_test.MainActivity
 import com.example.JSON_Rest_API_products_test.R
 import kotlinx.android.synthetic.main.activity_forgotten_password.*
+import kotlinx.android.synthetic.main.activity_login.*
 
 class ForgottenPasswordActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,10 +22,15 @@ class ForgottenPasswordActivity : AppCompatActivity() {
             val password = forgottenpasswordtxtbox.text.toString()
 
             // IF STATEMENTS
-            // IF PASSWORD CONTAINS @ SIGN
+            // IF EMAIL CONTAINS @ SIGN
             if (password.contains("@")) {
                 Toast.makeText(applicationContext,"Reset link has been sent to your email", Toast.LENGTH_SHORT).show()
-            } else { // OTHERWISE....
+            }
+            // IF ITS BLANK
+            if (password.isEmpty()) {
+                Toast.makeText(applicationContext,"field cannot be blank", Toast.LENGTH_SHORT).show()
+            }
+            else { // OTHERWISE....
                 Toast.makeText(applicationContext,"Please enter a valid email", Toast.LENGTH_SHORT).show()
             }
         }

@@ -186,6 +186,15 @@ class CheckoutActivity : AppCompatActivity() {
         {
             return "Enter your expiry date"
         }
+        if(ExpiryDate.length < 5)
+        {
+            return "Must be 5 Digits with a / in the middle"
+        }
+        if(!ExpiryDate.contains("/"))
+        {
+            return "Must contain a / in the middle"
+
+        }
         return null
     }
 
