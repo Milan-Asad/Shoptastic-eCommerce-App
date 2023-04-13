@@ -20,3 +20,5 @@ Version 1.5.2: Gallery page onclick updated (shows image, title, descrption). Fu
 Version 1.5.3: General backup (added pricing in gallery page) 01/04/2023
 
 Version 1.6: Added checkout page with validation and polished up the app 06/04/2023
+
+Version 1.6.1: Added more images to male/female category, XXX layouts and added coroutines to userlist 13/04/2023
