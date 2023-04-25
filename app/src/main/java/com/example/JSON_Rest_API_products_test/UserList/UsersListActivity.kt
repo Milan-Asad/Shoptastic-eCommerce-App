@@ -80,9 +80,11 @@ class UsersListActivity : AppCompatActivity() {
     private fun GetUserListData() {
 
         // **********COROUTINES**********
-        val coroutineScope = CoroutineScope(Dispatchers.Main)
-        coroutineScope.launch {
-            delay(3000L)
+        val coroutineScope = CoroutineScope(Dispatchers.Main) // MAKE THE VARIABLE
+        coroutineScope.launch {               // NOW ASSIGN VARIABLE TO FUNCTION
+            delay(500L)                              // DELAYING IT BY 0.5 SECONDS
+
+            // THEN IT DOES THE RETROFIT CALL
             val retrofitBuilder = Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
                 .baseUrl(BASE_URL_USER)
@@ -94,8 +96,8 @@ class UsersListActivity : AppCompatActivity() {
 
             retrofitData.enqueue(object : Callback<List<UserDataItem>?> {
                 override fun onResponse(
-                    call: Call<List<UserDataItem>?>,          // Calling the list from MyDataItem
-                    response: Response<List<UserDataItem>?>   // The response is (once again) MyDataItem
+                    call: Call<List<UserDataItem>?>,
+                    response: Response<List<UserDataItem>?>
                     // Because we want to display that
                 ) {
                     // Response stuff here and !! is used to null it

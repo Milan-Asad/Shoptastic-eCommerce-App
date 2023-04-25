@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.JSON_Rest_API_products_test.R
 import kotlinx.android.synthetic.main.row_items.view.*
-import kotlinx.android.synthetic.main.row_items.view.user_name
+
 import kotlinx.android.synthetic.main.userdata_card_layout.view.*
 
 

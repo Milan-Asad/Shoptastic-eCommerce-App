@@ -4,6 +4,7 @@ import android.content.Intent
 import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
@@ -36,7 +37,7 @@ class GalleryActivity : AppCompatActivity() {
             MensImages(
                 R.raw.menssuit,
                 "NAVY BLUE SUIT",
-                "Every wardrobe needs a suit that offers versatility and value, a suit that will take you from work to weddings and everything in between. Tailored to precision and perfection, this suit will add a new dimension to your wardrobe, giving it depth, colour and taste. Order your luxurious navy blue suit today. (For tailored fitting sizes, please click here).",
+                "Every wardrobe needs a suit that offers versatility and value, a suit that will take you from work to weddings and everything in between. Tailored to precision and perfection, this suit will add a new dimension to your wardrobe, giving it depth, colour and taste. Order your luxurious navy blue suit today.",
                 "Price: £149.99",
                 "Size: XXS, XS, S, M, L, XL, XXL"
             ),
@@ -64,7 +65,7 @@ class GalleryActivity : AppCompatActivity() {
             MensImages(
                 R.raw.mensdenimjacket,
                 "WORKS DENIM JACKET",
-                "Denim jackets are brilliant for sunshine weather. This jacket offers you versatility for your summer fits. Highly recommended with white jeans. Order your denim jacket today..",
+                "Denim jackets are brilliant for sunshine weather. This jacket offers you versatility for your summer fits. Highly recommended with white jeans. Order your denim jacket today.",
                 "Price: £29.99",
                 "Size: XXS, XS, S, M, L, XL"
             ),
@@ -83,10 +84,45 @@ class GalleryActivity : AppCompatActivity() {
                 "Size: XS, S, M, L, XL"
             ),
             MensImages(
+                R.raw.mensstripedpolo,
+                "TRIFLE  POLO",
+                "A triple striped polo. Stylish, sublime and stunning. Made with the finest material available, all to be sold at an affordable price. Add this to your wardrobe today.",
+                "Price: £4.99",
+                "Size: XS, S, M, L, XL"
+            ),
+            MensImages(
+                R.raw.mensstripedtshirt,
+                "TRIFLE  T-SHIRT",
+                "A triple striped t-shirt, Stylish and stunning, available at an affordable price. Made with the finest material available, all to be sold at an affordable price. Order your t-shirt today.",
+                "Price: £3.99",
+                "Size: XXS, XS, S, M, L, XL, XXL"
+            ),
+            MensImages(
+                R.raw.mensfloralshirt,
+                "FLORAL  SHIRT",
+                "A floral-printed design on a thin shirt, what more could you ask for going on holiday? Thin and breathable, this shirt is perfect for going to warm weather countries. Order your floral shirt today.",
+                "Price: £17.99",
+                "Size: XXS, XS, S, M, L, XL"
+            ),
+            MensImages(
+                R.raw.mensbluehoodie,
+                "1890  HOODIE",
+                "A sky-blue hoodie with a gradient fade, padded with soft cotton inside to give you a smooth feeling. Designed to be slim-fitted. Order your Hoodie today.",
+                "Price: £19.99",
+                "Size: XS, S, M, L, XL, XXL"
+            ),
+            MensImages(
                 R.raw.menspurplevneck,
                 "PREMIER  V-NECK",
                 "A rich-purple V-neck made with fine cotton, precisely threaded to give your body an amazing feeling. V-necks work perfectly over a shirt. Order your V-Neck today.",
                 "Price: £19.99",
+                "Size: XS, S, M, L, XL"
+            ),
+            MensImages(
+                R.raw.mensknitwear,
+                "VINTAGE  KNITWEAR",
+                "Knitted by experts, this vintage knitwear is perfect for winter. Using extra thick wool to keep you warm when the temperature falls. Can be worn alone or over a shirt. Order your Knitwear today.",
+                "Price: £24.99",
                 "Size: XS, S, M, L, XL"
             ),
 
@@ -94,6 +130,8 @@ class GalleryActivity : AppCompatActivity() {
 
         )
 
+        // WRITING A LOG MESSAGE
+        Log.d("Response", "Mens Category count response is: ${MensimageList.size}")
 
         // RECYCLERVIEW ETC STUFF
         layoutManager = LinearLayoutManager(this)

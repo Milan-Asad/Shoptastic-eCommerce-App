@@ -37,13 +37,13 @@
                 android:id="@+id/menspagetext"
                 android:layout_width="324dp"
                 android:layout_height="289dp"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="18dp"
                 android:fontFamily="@font/almarai_extrabold"
                 android:gravity="center|top"
                 android:rotation="270"
                 android:text="TEST"
                 android:textColor="#919191"
-                android:textSize="25dp"
+                android:textSize="20dp"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>

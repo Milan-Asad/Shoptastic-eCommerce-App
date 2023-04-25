@@ -3,6 +3,7 @@ package com.example.JSON_Rest_API_products_test
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
@@ -63,15 +64,15 @@ class WomensCategory : AppCompatActivity() {
             MensImages(
                 R.raw.womensdenimjacket1,
                 "RIVA DENIM JACKET",
-                "Every wardrobe needs a suit that offers versatility and value, a suit that will take you from work to weddings and everything in between. Tailored to precision and perfection, this suit will add a new dimension to your wardrobe, giving it depth, colour and taste. Order your luxurious navy blue suit today. (For tailored fitting sizes, please click here).",
-                "Price: £24.99",
+                "Thin slim-fitted denim jacket. Everyone needs a denim jacket for the sunshine. With extra large zipped pockets, so you can keep more of your valuables with you wherever you go. Order this fabulous riva denim jacket today.",
+                "Price: £37.99",
                 "Size: XXS, XS, S, M, L, XL, XXL"
             ),
             MensImages(
                 R.raw.womensvnecktshirt,
                 "SHORT SLEEVE V-NECK",
-                "Every wardrobe needs a suit that offers versatility and value, a suit that will take you from work to weddings and everything in between. Tailored to precision and perfection, this suit will add a new dimension to your wardrobe, giving it depth, colour and taste. Order your luxurious navy blue suit today. (For tailored fitting sizes, please click here).",
-                "Price: £24.99",
+                "A loose V-neck. Elegant and perfect to wear at home. Designed to give your body airflow to help keep you cool and relaxed when the temperature rises. Order your short sleeve V-Neck today.",
+                "Price: £14.99",
                 "Size: XXS, XS, S, M, L, XL, XXL"
             ),
             MensImages(
@@ -85,7 +86,21 @@ class WomensCategory : AppCompatActivity() {
                 R.raw.womenstshirt,
                 "COTTON  T-SHIRT",
                 "A soft and simple t-shirt. Every wardrobe needs a t-shirt. The most versatile clothing wear, perfect for all seasons. Made with 100% cotton to provide a comforting experience. Order your t-shirt today.",
-                "Price: £2.50",
+                "Price: £4.99",
+                "Size: XXS, XS, S, M, L, XL, XXL"
+            ),
+            MensImages(
+                R.raw.womensgreenknitwear,
+                "FUNNEL  KNITWEAR",
+                "Super soft-silky smooth luxurious knitted jumper. Created from the finest material, knitted with precision and tailored to perfection. Order your knitwear jumper today.",
+                "Price: £28.99",
+                "Size: XXS, XS, S, M, L, XL, XXL"
+            ),
+            MensImages(
+                R.raw.womensgreyknitwear,
+                "CREWS  KNITWEAR",
+                "Premium ultra smooth knitwear jumper. A match made in heaven for your skin. Discover how well this knitwear jumper matches with your skin today. Exclusively designed and sold here.",
+                "Price: £28.99",
                 "Size: XXS, XS, S, M, L, XL, XXL"
             ),
             MensImages(
@@ -103,8 +118,8 @@ class WomensCategory : AppCompatActivity() {
                 "Size: XXS, XS, S, M, L, XL, XXL"
             ),
             MensImages(
-                R.raw.womensjeans,
-                "SLIM-FIT JEANS",
+                R.raw.womensbluejeans,
+                "BLUE SLIM JEANS",
                 "Jeans have become more and popular in this decade, due to it's ability to be worn at almost any occasion. The standard go to trousers when heading out. Our jeans are designed to withhold strain and abuse back in our tailoring factory. Order your jeans today.",
                 "Price: £14.99",
                 "Size: XXS, XS, S, M, L, XL, XXL"
@@ -112,18 +127,25 @@ class WomensCategory : AppCompatActivity() {
             MensImages(
                 R.raw.womensankleboots,
                 "SUEDE ANKLE BOOTS",
-                "A soft and simple t-shirt. Every wardrobe needs a t-shirt. The most versatile clothing wear, perfect for all seasons. Made with 100% cotton to provide a comforting experience. Order your t-shirt today.",
+                "Suede ankle boots with a 5 inch heel. Great for wearing during the autumn season. Fitted with 0.75mm of foam padding inside to give you a comfortable feeling whilst walking. Order your boots today.",
                 "Price: £32.99",
+                "Size: 2, 3, 4, 5, 6, 7, 8"
+            ),
+            MensImages(
+                R.raw.womenswhiteankleboots,
+                "WHITE ANKLE BOOTS",
+                "Metallic white pointed ankle boots with a 3 inch block heel. Sleek, shiny and stylish. This boot is perfect for summer weather. Add this boot to your collection today. ",
+                "Price: £39.99",
                 "Size: 2, 3, 4, 5, 6, 7, 8"
             ),
 
 
 
-
-
-
-
         )
+
+        // WRITING A LOG MESSAGE FOR FEMALE SECTION
+        Log.d("Response", "Womens Category count response is: ${WomensimageList.size}")
+
 
         // RECYCLERVIEW ETC STUFF
         layoutManager = LinearLayoutManager(this)

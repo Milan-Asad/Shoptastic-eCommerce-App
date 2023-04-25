@@ -64,6 +64,3 @@ class GalleryAdapter : RecyclerView.Adapter<GalleryAdapter.ViewHolder>() {
 
 
 }
-
-// https://www.google.com/search?q=github+android+studio+kotlin+recyclerview+onclock&rlz=1C1CHBF_en-GBGB922GB922&oq=github+android+studio+kotlin+recyclerview+onclock&aqs=chrome..69i57.8591j0j4&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:f45f0653,vid:extXn7YFjmY
-// https://www.youtube.com/watch?v=extXn7YFjmY - KOTLIN

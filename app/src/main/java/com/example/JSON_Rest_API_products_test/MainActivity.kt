@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.ListFragment
@@ -23,19 +24,8 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-// ORIGINAL LINK: https://jsonplaceholder.typicode.com/photos
 
-//const val BASE_URL = "https://jsonplaceholder.typicode.com"
-//const val BASE_URL = "https://dummyjson.com"
 //const val BASE_URL = "https://fakestoreapi.com" - MAIN LINK
-//
-// https://www.youtube.com/watch?v=EoJX7h7lGxM - RecyclerView Onclick
-//
-// https://devtut.github.io/android/recyclerview-onclicklisteners.html#easy-onlongclick-and-onclick-example
-//
-// https://www.youtube.com/watch?v=ENFWgi2z5KA
-//
-// https://www.youtube.com/watch?v=v8MbOjBCu0o - Fragment
 
 
 const val BASE_URL = "https://fakestoreapi.com"
@@ -85,6 +75,16 @@ class MainActivity : AppCompatActivity() {
         val ImageBtn = findViewById(R.id.PhotoImage) as ImageView
         ImageBtn.setOnClickListener {
             val intent = Intent(this, GalleryActivity::class.java)
+            startActivity(intent)
+
+            overridePendingTransition(0, 0)
+            FLAG_ACTIVITY_NO_ANIMATION
+        }
+
+        // TOOLBAR OPENS ABOUT US PAGE
+        val ToolbarBtn = findViewById(R.id.ShoptasticTxt) as TextView
+        ToolbarBtn.setOnClickListener {
+            val intent = Intent(this, AboutUs::class.java)
             startActivity(intent)
 
             overridePendingTransition(0, 0)

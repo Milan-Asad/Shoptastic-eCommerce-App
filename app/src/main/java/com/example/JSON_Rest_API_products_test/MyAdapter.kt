@@ -1,8 +1,6 @@
 package com.example.JSON_Rest_API_products_test
 
 import android.content.Context
-import android.content.Intent
-import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -12,13 +10,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.JSON_Rest_API_products_test.Throwaway.ThrowawayDataItem
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.row_items.view.*
 import kotlinx.android.synthetic.main.row_items_test.view.*
-import java.util.Locale.Category
 
 
-
-class MyAdapter (val context: Context, val testlist: List<ThrowawayDataItem>): RecyclerView.Adapter<MyAdapter.ViewHolder>() {
+class MyAdapter(val context: Context, val testlist: List<ThrowawayDataItem>): RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 
     // **********VIEWHOLDER STUFF**********
     // MAKING THE VIEW HOLDER AND LOCAL VARIABLES FOR BINDING
