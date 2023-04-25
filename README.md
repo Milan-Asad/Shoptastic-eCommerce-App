@@ -1,26 +1,13 @@
 # Uni-FMP-Shopping-JSON-REST-API-App
 Uni Shopping JSON REST API App
 
-Version 1.0: General backup, incase anything happens 12/02/2023
+Shpotastic: My Final Major Project for my university project. 
 
-Version 1.1: Multiple screen layout supported (xxhdpi), Toolbar and navigation added and General back up 19/02/2023
+Created on Android Studio using Kotlin, Retrofit, Coroutines and ViewBinding.
 
-Version 1.2: Password Login Screen added and UserData JSON Imported 01/03/2023
-
-Version 1.3: Gallery list page added 11/03/2023
-
-Version 1.4: Forgotten password page with toast message 16/03/2023
-
-Version 1.5: Gallery page onclick listener added (opens new page on the recyclerview when you click on it) 18/03/2023
-
-Version 1.5.1: Top navigation bar added on the gallery page (general back up before experimenting) 23/03/2022
-
-Version 1.5.2: Gallery page onclick updated (shows image, title, descrption). Further updates coming 24/03/2023
-
-Version 1.5.3: General backup (added pricing in gallery page) 01/04/2023
-
-Version 1.6: Added checkout page with validation and polished up the app 06/04/2023
-
-Version 1.6.1: Added more images to male/female category, XXX layouts and added coroutines to userlist 13/04/2023
-
-Version 1.7.0: Final backup. Fully completed. 25/04/2023
+Features:
+- Fetches Data from an API
+- Has a password login page (here are the accounts: username/password for admin access | milan/password to see the checkout page)
+- Male and Female section clothing 
+- Top and bottom navigation bar
+- Threaded to ensure the add doesn't crash (using coroutines)
