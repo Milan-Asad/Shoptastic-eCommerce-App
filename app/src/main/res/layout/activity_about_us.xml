@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/almarai_extrabold"
         android:gravity="center"
-        android:text="ABOUS US"
+        android:text="ABOUT US"
         android:textColor="#000000"
         android:textSize="20dp"
         android:textStyle="bold"

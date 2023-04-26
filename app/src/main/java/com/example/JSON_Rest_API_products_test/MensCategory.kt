@@ -66,26 +66,10 @@ class MensCategory : AppCompatActivity() {
             startActivity(intent)
             overridePendingTransition(0, 0)
             Intent.FLAG_ACTIVITY_NO_ANIMATION
-            //Toast.makeText(applicationContext,"SERVICE NOT AVAILABLE RIGHT NOW", Toast.LENGTH_SHORT).show()
+
         }
 
 
-
-
-
-
-
-        /*
-        // RECYCLERVIEW ETC STUFF
-
-        val menscategory_recyclerview = findViewById<RecyclerView>(R.id.menscategory_recyclerview)
-
-        layoutManager = LinearLayoutManager(this)
-        menscategory_recyclerview.layoutManager = layoutManager
-        adapter = MensCategoryAdapter()
-        menscategory_recyclerview.adapter = adapter
-
-         */
 
 
     }

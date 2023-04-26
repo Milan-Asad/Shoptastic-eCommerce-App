@@ -31,7 +31,7 @@ class WomensCategory : AppCompatActivity() {
         setContentView(R.layout.activity_womens_category)
 
         // MAKKING ARRAY FOR WOMENS IMAGE PAGE
-        // REMEMBER ALL IMAGES ARE MEANT TO BE 956x1285
+
         val WomensimageList = listOf<MensImages>(
             MensImages(
                 R.raw.femaleclothingcategory,

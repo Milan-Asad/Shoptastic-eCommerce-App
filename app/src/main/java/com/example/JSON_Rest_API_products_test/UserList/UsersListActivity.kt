@@ -84,7 +84,7 @@ class UsersListActivity : AppCompatActivity() {
         coroutineScope.launch {               // NOW ASSIGN VARIABLE TO FUNCTION
             delay(500L)                              // DELAYING IT BY 0.5 SECONDS
 
-            // THEN IT DOES THE RETROFIT CALL
+            // RETROFIT CALL AGAIN FOR ADMIN ACCESS
             val retrofitBuilder = Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
                 .baseUrl(BASE_URL_USER)
@@ -98,7 +98,7 @@ class UsersListActivity : AppCompatActivity() {
                 override fun onResponse(
                     call: Call<List<UserDataItem>?>,
                     response: Response<List<UserDataItem>?>
-                    // Because we want to display that
+                    // As we want to display that
                 ) {
                     // Response stuff here and !! is used to null it
                     val responseBody = response.body()!!
@@ -106,9 +106,9 @@ class UsersListActivity : AppCompatActivity() {
                     UserAdapter.notifyDataSetChanged()                    // Notifys whats attached when the data has changed and should update in the view
 
                     // Below is getting the recycler view and attaching the adapter to it
-                    // Remember the adapter has all the information
 
-                    //val recyclerViewUsers = findViewById<RecyclerView>(R.id.recyclerViewUsers)
+
+
                     recyclerViewUserList.adapter = UserAdapter
 
                 }

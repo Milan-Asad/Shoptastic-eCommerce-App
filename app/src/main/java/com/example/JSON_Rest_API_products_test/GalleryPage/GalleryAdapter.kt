@@ -12,6 +12,7 @@ import com.example.JSON_Rest_API_products_test.R
 
 class GalleryAdapter : RecyclerView.Adapter<GalleryAdapter.ViewHolder>() {
 
+    // EXPERIMENTAL
     private var images = intArrayOf(
         // MENS
         R.raw.mensjacketnew,
@@ -54,7 +55,7 @@ class GalleryAdapter : RecyclerView.Adapter<GalleryAdapter.ViewHolder>() {
 
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, MainActivity::class.java)
-                //intent.putExtra("value", "value")
+
                 itemView.context.startActivity(intent)
             }
 

@@ -224,17 +224,4 @@ class CheckoutActivity : AppCompatActivity() {
 
 }
 
-/*
-STUFF NEEDED FOR PAYMENT PAGE:
-
-EMAIL (done)
-FULL NAME (done)
-POSTCODE?
-CARD NUMBER
-EXPIRATION DATE
-CCV
-
-PAY NOW BUTTON
-
-*/
 

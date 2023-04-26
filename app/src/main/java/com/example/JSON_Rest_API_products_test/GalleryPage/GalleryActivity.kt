@@ -32,7 +32,7 @@ class GalleryActivity : AppCompatActivity() {
         setContentView(R.layout.activity_gallery)
 
         // MAKKING ARRAY FOR MENS IMAGE PAGE
-        // REMEMBER ALL IMAGES ARE MEANT TO BE 956x1285
+
         val MensimageList = listOf<MensImages>(
             MensImages(
                 R.raw.menssuit,

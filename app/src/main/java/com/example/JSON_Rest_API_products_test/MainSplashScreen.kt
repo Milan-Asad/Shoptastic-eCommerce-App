@@ -7,11 +7,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.recyclerview.widget.LinearLayoutManager
 
-// ORIGINAL LINK: https://jsonplaceholder.typicode.com/photos
 
-//const val BASE_URL = "https://jsonplaceholder.typicode.com"
-//const val BASE_URL = "https://dummyjson.com"
-//const val BASE_URL = "https://fakestoreapi.com"
 
 
 class MainSplashScreen : AppCompatActivity() {

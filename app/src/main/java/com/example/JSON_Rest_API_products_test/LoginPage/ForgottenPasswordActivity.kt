@@ -36,6 +36,7 @@ class ForgottenPasswordActivity : AppCompatActivity() {
         }
 
 
+        //**********BOTTOM TOOLBAR**********
 
         // OPENS MAIN SCREEN (LEFT)
         val ListBtn = findViewById(R.id.ListImage) as ImageView

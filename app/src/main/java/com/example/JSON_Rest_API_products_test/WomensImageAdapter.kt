@@ -19,11 +19,11 @@ class WomensImageAdapter(
     // MAKING A VIEWHOLDER
     class WomensImageViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        // CALLING IT FROM MENS ITEM LIST XML
+        // CALLING IT FROM WOMENS ITEM LIST XML
         val imageSrc = view.findViewById<ImageView>(R.id.menspageimage) // menspageimage
         val title = view.findViewById<TextView>(R.id.menspagetext)      // menspagetext
 
-        // BINDING THE STUFF FROM MENS IMAGE
+        // BINDING THE STUFF FROM WOMENS IMAGE
         fun bindView(image: MensImages, listener: (MensImages) -> Unit) {
             imageSrc.setImageResource(image.imageSource)
             title.text = image.imageTitle

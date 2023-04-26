@@ -15,7 +15,7 @@ class WomensCategoryLayout : AppCompatActivity() {
         val image = intent.getParcelableExtra<MensImages>(GalleryActivity.INTENT_PARCELABLE)
 
 
-
+        //  ASSIGNING THE VARS
         val imgSrc = findViewById<ImageView>(R.id.womensCategoryImage)
         val imgTitle = findViewById<TextView>(R.id.womensCategoryTitle)
         val imgDescription = findViewById<TextView>(R.id.womensCategoryDescription)
