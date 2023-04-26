@@ -10,4 +10,4 @@ Features:
 - Has a password login page (here are the accounts: username/password for admin access | milan/password to see the checkout page)
 - Male and Female section clothing 
 - Top and bottom navigation bar
-- Threaded to ensure the add doesn't crash (using coroutines)
+- Used Coroutines to delay the function of UserDataList to prevent crashing
