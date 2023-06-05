@@ -5,6 +5,12 @@ Shpotastic: My Final Major Project for my university project.
 
 Created on Android Studio using Kotlin, Retrofit, Coroutines and ViewBinding.
 
+Tech Stack:
+- Written in Kotlin
+- ViewBinding 
+- Coroutines
+- Retrofit
+
 Features:
 - Fetches Data from an API
 - Has a password login page (here are the accounts: username/password for admin access | milan/password to see the checkout page)
