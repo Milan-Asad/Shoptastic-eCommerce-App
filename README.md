@@ -1,7 +1,6 @@
-# Uni-FMP-Shopping-JSON-REST-API-App
-Uni Shopping JSON REST API App
+# Shoptastic 
 
-Shpotastic: My Final Major Project for my university project. 
+Shpotastic: An eCommerce replica app. A project for my final university assignment. 
 
 Created on Android Studio using Kotlin, Retrofit, Coroutines and ViewBinding.
 
