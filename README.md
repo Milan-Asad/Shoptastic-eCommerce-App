@@ -4,6 +4,9 @@ Shpotastic: An eCommerce replica app. A project for my final university assignme
 
 Created on Android Studio using Kotlin, Retrofit, Coroutines and ViewBinding.
 
+![image](https://github.com/Milan-Asad/Shoptastic-eCommerce-App/assets/79909176/dedab104-0da9-43e0-9bae-27dc81a78877)
+
+
 Tech Stack:
 - Written in Kotlin
 - ViewBinding 
