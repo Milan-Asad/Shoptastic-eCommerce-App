@@ -6,6 +6,8 @@ Created on Android Studio using Kotlin, Retrofit, Coroutines and ViewBinding.
 
 ![image](https://github.com/Milan-Asad/Shoptastic-eCommerce-App/assets/79909176/dedab104-0da9-43e0-9bae-27dc81a78877)
 ![image](https://github.com/Milan-Asad/Shoptastic-eCommerce-App/assets/79909176/e0176d19-fd6d-4151-8d42-34811899fe24)
+![image](https://github.com/Milan-Asad/Shoptastic-eCommerce-App/assets/79909176/0e1b7973-4582-46b6-aa73-3804056d45ca)
+
 
 
 
