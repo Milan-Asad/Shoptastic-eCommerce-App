@@ -9,8 +9,6 @@ Created on Android Studio using Kotlin, Retrofit, Coroutines and ViewBinding.
 ![image](https://github.com/Milan-Asad/Shoptastic-eCommerce-App/assets/79909176/0e1b7973-4582-46b6-aa73-3804056d45ca)
 
 
-
-
 Tech Stack:
 - Written in Kotlin
 - ViewBinding 
